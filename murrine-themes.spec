@@ -18,6 +18,7 @@ Source6: MurrineThemePack.tar.bz2
 License: GPL
 Group: Graphical desktop/GNOME
 Url: http://cimi.netsons.org/pages/murrine.php
+BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 Requires: murrine
 
