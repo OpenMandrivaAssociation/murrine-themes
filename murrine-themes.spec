@@ -1,5 +1,5 @@
 %define name murrine-themes
-%define version 1.0
+%define version 2.0
 %define release %mkrel 1
 
 %define themesdir %{_datadir}/themes
@@ -8,16 +8,20 @@ Summary: Themes for Murrine
 Name:    %{name}
 Version: %{version}
 Release: %{release}
-Source0: MurrinaAquaIsh.tar.bz2
-Source1: MurrinaFancyCandy.tar.bz2
-Source2: MurrinaGilouche.tar.bz2
-Source3: MurrinaLoveGray.tar.bz2
-Source4: MurrinaVerdeOlivo.tar.bz2
-Source5: MurrineRounded.tar.bz2
-Source6: MurrineThemePack.tar.bz2
+Source0: MurrinaAquaIsh.tar.lzma
+Source1: MurrinaBlue.tar.lzma
+Source2: MurrinaElement.tar.lzma
+Source3: MurrinaFancyCandy.tar.lzma
+Source4: MurrinaGilouche.tar.lzma
+Source5: MurrinaLoveGray.tar.lzma
+Source6: MurrinaOransun.tar.lzma
+Source7: MurrinaTango.tar.lzma
+Source8: MurrinaVerdeOlivo.tar.lzma
+Source9: MurrineRounded.tar.lzma
+Source10: MurrineThemePack.tar.lzma
 License: GPL
 Group: Graphical desktop/GNOME
-Url: http://cimi.netsons.org/pages/murrine.php
+Url:   http://www.cimitan.com/murrine/themes/gallery
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 Requires: murrine
@@ -32,13 +36,17 @@ Various GTK2 and Metacity themes for the Murrine GTK2.x engine.
 %install
 %__rm -rf %{buildroot}
 %__mkdir -p %{buildroot}%{themesdir}
-%__tar jfx %SOURCE0 -C %{buildroot}%{themesdir}
-%__tar jfx %SOURCE1 -C %{buildroot}%{themesdir}
-%__tar jfx %SOURCE2 -C %{buildroot}%{themesdir}
-%__tar jfx %SOURCE3 -C %{buildroot}%{themesdir}
-%__tar jfx %SOURCE4 -C %{buildroot}%{themesdir}
-%__tar jfx %SOURCE5 -C %{buildroot}%{themesdir}
-%__tar jfx %SOURCE6 -C %{buildroot}%{themesdir}
+%__lzma -dc %SOURCE0 | %__tar fx - -C %{buildroot}%{themesdir}
+%__lzma -dc %SOURCE1 | %__tar fx - -C %{buildroot}%{themesdir}
+%__lzma -dc %SOURCE2 | %__tar fx - -C %{buildroot}%{themesdir}
+%__lzma -dc %SOURCE3 | %__tar fx - -C %{buildroot}%{themesdir}
+%__lzma -dc %SOURCE4 | %__tar fx - -C %{buildroot}%{themesdir}
+%__lzma -dc %SOURCE5 | %__tar fx - -C %{buildroot}%{themesdir}
+%__lzma -dc %SOURCE6 | %__tar fx - -C %{buildroot}%{themesdir}
+%__lzma -dc %SOURCE7 | %__tar fx - -C %{buildroot}%{themesdir}
+%__lzma -dc %SOURCE8 | %__tar fx - -C %{buildroot}%{themesdir}
+%__lzma -dc %SOURCE9 | %__tar fx - -C %{buildroot}%{themesdir}
+%__lzma -dc %SOURCE10 | %__tar fx - -C %{buildroot}%{themesdir}
 
 %clean
 %__rm -rf %{buildroot}
