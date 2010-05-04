@@ -1,6 +1,6 @@
 %define name murrine-themes
 %define version 2.0
-%define release %mkrel 4
+%define release %mkrel 5
 
 %define themesdir %{_datadir}/themes
 
@@ -19,6 +19,8 @@ Source7: MurrinaTango.tar.lzma
 Source8: MurrinaVerdeOlivo.tar.lzma
 Source9: MurrineRounded.tar.lzma
 Source10: MurrineThemePack.tar.lzma
+Source11: Murreza.tar.lzma
+Source12: Murrine-Sky.tar.lzma
 License: GPL
 Group: Graphical desktop/GNOME
 Url:   http://www.cimitan.com/murrine/themes/gallery
@@ -47,6 +49,11 @@ Various GTK2 and Metacity themes for the Murrine GTK2.x engine.
 %__lzma -dc %SOURCE8 | %__tar fx - -C %{buildroot}%{themesdir}
 %__lzma -dc %SOURCE9 | %__tar fx - -C %{buildroot}%{themesdir}
 %__lzma -dc %SOURCE10 | %__tar fx - -C %{buildroot}%{themesdir}
+%__lzma -dc %SOURCE11 | %__tar fx - -C %{buildroot}%{themesdir}
+%__lzma -dc %SOURCE12 | %__tar fx - -C %{buildroot}%{themesdir}
+
+%__mv %{buildroot}%{themesdir}/Murreza/* %{buildroot}%{themesdir}/
+%__rm -rf %{buildroot}%{themesdir}/Murreza
 
 %clean
 %__rm -rf %{buildroot}
