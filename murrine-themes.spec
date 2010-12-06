@@ -1,6 +1,6 @@
 %define name murrine-themes
 %define version 2.0
-%define release %mkrel 5
+%define release %mkrel 6
 
 %define themesdir %{_datadir}/themes
 
