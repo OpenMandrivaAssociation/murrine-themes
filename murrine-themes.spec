@@ -6,8 +6,8 @@
 
 Summary: Themes for Murrine
 Name:    %{name}
-Version: %{version}
-Release: %{release}
+Version:	2.98.11
+Release:	1
 Source0: MurrinaAquaIsh.tar.lzma
 Source1: MurrinaBlue.tar.lzma
 Source2: MurrinaElement.tar.lzma
