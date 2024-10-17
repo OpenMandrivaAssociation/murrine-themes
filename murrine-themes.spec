@@ -23,7 +23,7 @@ Source11: Murreza.tar.lzma
 Source12: Murrine-Sky.tar.lzma
 License: GPL
 Group: Graphical desktop/GNOME
-Url:   http://www.cimitan.com/murrine/themes/gallery
+Url:   https://www.cimitan.com/murrine/themes/gallery
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildArch: noarch
 Requires: murrine
